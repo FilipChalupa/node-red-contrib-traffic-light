@@ -1,30 +1,34 @@
-<!-- EXAMPLE NODE -->
 <script type="text/javascript" id="node-example">
-    RED.nodes.registerType('example', {
-        category: 'exampleCategory',
-        color: '#e2b784',
+    RED.nodes.registerType('traffic light', {
+        category: 'timer',
+        color: '#8cff73',
         inputs: 1,
-        inputLabels: "maybe a message",
-        outputs: 1,
-        outputLabels: "a message with a topic",
+        inputLabels: "state change",
+        outputs: 3,
+        outputLabels: "on off command",
         icon: "node.svg",
         defaults: {
             name: { value: '' },
-            topic: { value: '' }
+            transitionSpeedMilliseconds: { value: 1000 },
+            outputOnConnect: { value: true },
         },
         label: function () {
-            return this.name || 'example'
+            return this.name || 'traffic light'
         }
     });
 </script>
-<script type="text/html" data-template-name="example">
+<script type="text/html" data-template-name="traffic light">
     <div class="form-row">
         <label for="node-input-name"><i class="fa fa-tag"></i> Name</label>
         <input type="text" id="node-input-name" placeholder="Name">
     </div>
     <div class="form-row">
-        <label for="node-input-topic"><i class="fa fa-cog"></i> Topic</label>
-        <input type="text" id="node-input-topic" placeholder="Topic" required>
+        <label for="node-input-transitionSpeedMilliseconds"><i class="fa fa-cog"></i> Transition speed (milliseconds)</label>
+        <input type="number" id="node-input-transitionSpeedMilliseconds" placeholder="1000">
+    </div>
+    <div class="form-row">
+        <label for="node-input-outputOnConnect"><i class="fa fa-cog"></i> Output on connect</label>
+        <input type="checkbox" id="node-input-outputOnConnect">
     </div>
 </script>
 <script type="text/html" data-help-name="example">

@@ -4,13 +4,13 @@
         color: '#8cff73',
         inputs: 1,
         inputLabels: "state change",
-        outputs: 3,
         outputLabels: "on off command",
         icon: "node.svg",
         defaults: {
             name: { value: '' },
             transitionSpeedMilliseconds: { value: 1000 },
             outputOnConnect: { value: true },
+            start: { value: 'green' },
         },
         label: function () {
             return this.name || 'traffic light'
@@ -25,6 +25,13 @@
     <div class="form-row">
         <label for="node-input-transitionSpeedMilliseconds"><i class="fa fa-cog"></i> Transition speed (milliseconds)</label>
         <input type="number" id="node-input-transitionSpeedMilliseconds" placeholder="1000">
+    </div>
+    <div class="form-row">
+        <label for="node-input-start"><i class="fa fa-cog"></i> Start</label>
+        <select id="node-input-start">
+            <option value="green">Green</option>
+            <option value="red">Red</option>
+        </select>
     </div>
     <div class="form-row">
         <label for="node-input-outputOnConnect"><i class="fa fa-cog"></i> Output on connect</label>

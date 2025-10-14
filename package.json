@@ -21,6 +21,9 @@
   ],
   "author": "Filip Chalupa",
   "license": "ISC",
+  "files": [
+    "nodes"
+  ],
   "node-red": {
     "nodes": {
       "node": "nodes/node.js"

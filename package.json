@@ -8,7 +8,9 @@
     "typescript": "^4.9.5"
   },
   "scripts": {
-    "build": "tsc"
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "start": "npm run dev"
   },
   "keywords": [
     "node-red",

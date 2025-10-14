@@ -27,7 +27,6 @@ export = function (RED: NodeRED.NodeAPI) {
 				on: state === 'on',
 				off: state === 'off',
 			})
-			console.log({ state })
 			this.send({
 				payload: {
 					state,

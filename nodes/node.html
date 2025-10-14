@@ -1,55 +1,67 @@
-<script type="text/javascript" id="node-example">
-    RED.nodes.registerType('traffic light', {
-        category: 'timer',
-        color: '#8cff73',
-        inputs: 1,
-        inputLabels: "state change",
-        outputLabels: "on off command",
-        icon: "node.svg",
-        defaults: {
-            name: { value: '' },
-            transitionSpeedMilliseconds: { value: 1000 },
-            outputOnConnect: { value: true },
-            start: { value: 'green' },
-        },
-        label: function () {
-            return this.name || 'traffic light'
-        }
-    });
+<script type="text/javascript" id="node-traffic-light">
+	RED.nodes.registerType('traffic light', {
+		category: 'timer',
+		color: '#8cff73',
+		inputs: 1,
+		inputLabels: 'state change',
+		outputLabels: 'on off command',
+		icon: 'node.svg',
+		defaults: {
+			name: { value: '' },
+			transitionSpeedMilliseconds: { value: 1000 },
+			outputOnConnect: { value: true },
+			start: { value: 'green' },
+		},
+		label: function () {
+			return this.name || 'traffic light'
+		},
+	})
 </script>
 <script type="text/html" data-template-name="traffic light">
-    <div class="form-row">
-        <label for="node-input-name"><i class="fa fa-tag"></i> Name</label>
-        <input type="text" id="node-input-name" placeholder="Name">
-    </div>
-    <div class="form-row">
-        <label for="node-input-transitionSpeedMilliseconds"><i class="fa fa-cog"></i> Transition speed (milliseconds)</label>
-        <input type="number" id="node-input-transitionSpeedMilliseconds" placeholder="1000">
-    </div>
-    <div class="form-row">
-        <label for="node-input-start"><i class="fa fa-cog"></i> Start</label>
-        <select id="node-input-start">
-            <option value="green">Green</option>
-            <option value="red">Red</option>
-        </select>
-    </div>
-    <div class="form-row">
-        <label for="node-input-outputOnConnect"><i class="fa fa-cog"></i> Output on connect</label>
-        <input type="checkbox" id="node-input-outputOnConnect">
-    </div>
+	<div class="form-row">
+		<label for="node-input-name"><i class="fa fa-tag"></i> Name</label>
+		<input type="text" id="node-input-name" placeholder="Name" />
+	</div>
+	<div class="form-row">
+		<label for="node-input-transitionSpeedMilliseconds"
+			><i class="fa fa-clock-o"></i> Transition speed (milliseconds)</label
+		>
+		<input
+			type="number"
+			id="node-input-transitionSpeedMilliseconds"
+			placeholder="1000"
+		/>
+	</div>
+	<div class="form-row">
+		<label for="node-input-start"><i class="fa fa-play-circle"></i> Start</label>
+		<select id="node-input-start">
+			<option value="green">Green</option>
+			<option value="red">Red</option>
+		</select>
+	</div>
+	<div class="form-row">
+		<label for="node-input-outputOnConnect"
+			><i class="fa fa-cog"></i> Output on connect</label
+		>
+		<input type="checkbox" id="node-input-outputOnConnect" />
+	</div>
 </script>
-<script type="text/html" data-help-name="example">
-    <p>Typescript example Node-RED node</p>
-    <h3>Inputs</h3>
-    <dl class="message-properties">
-    <dt>payload
-        <span class="property-type">string</span>
-    </dt>
-    <h3>Outputs</h3>
-    <dl class="message-properties">
-    <dt>payload
-        <span class="property-type">string</span>
-    </dt>
-    <h3>Details</h3>
-    <p>Some more information about the node.</p>
+<script type="text/html" data-help-name="traffic light">
+	<p>Typescript example Node-RED node</p>
+	<h3>Inputs</h3>
+	<dl class="message-properties">
+		<dt>
+			payload
+			<span class="property-type">boolean</span>
+		</dt>
+		<h3>Outputs</h3>
+		<dl class="message-properties">
+			<dt>
+				payload
+				<span class="property-type">object</span>
+			</dt>
+			<h3>Details</h3>
+			<p>Some more information about the node.</p>
+		</dl>
+	</dl>
 </script>

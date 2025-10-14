@@ -13,6 +13,10 @@
     "dev": "tsc --watch",
     "start": "npm run dev"
   },
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/FilipChalupa/node-red-contrib-traffic-light.git"
+	},
   "keywords": [
     "node-red",
     "typescript",

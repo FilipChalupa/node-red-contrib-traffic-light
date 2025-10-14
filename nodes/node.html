@@ -1,18 +1,18 @@
 <!-- EXAMPLE NODE -->
 <script type="text/javascript" id="node-example">
-    RED.nodes.registerType('example',{
-        category:'exampleCategory',
-        color:'#e2b784',
-        inputs:1,
+    RED.nodes.registerType('example', {
+        category: 'exampleCategory',
+        color: '#e2b784',
+        inputs: 1,
         inputLabels: "maybe a message",
-        outputs:1,
+        outputs: 1,
         outputLabels: "a message with a topic",
-        icon:"node.svg", 
+        icon: "node.svg",
         defaults: {
-            name: {value:''},
-            topic: {value:''}
+            name: { value: '' },
+            topic: { value: '' }
         },
-        label: function(){
+        label: function () {
             return this.name || 'example'
         }
     });

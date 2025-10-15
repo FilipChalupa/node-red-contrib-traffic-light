@@ -77,16 +77,28 @@ export = function (RED: NodeRED.NodeAPI) {
 
 		this.on('input', (message: any, _send, done) => {
 			targetSimpleState =
-				message.payload === 'on'
+				message.payload === 'on' ||
+				message.payload === 'true' ||
+				message.payload === 'y' ||
+				message.payload === 'yes' ||
+				message.payload === true ||
+				message.payload === 1
 					? true
-					: message.payload === 'off'
+					: message.payload === 'off' ||
+					  message.payload === 'false' ||
+					  message.payload === 'n' ||
+					  message.payload === 'no' ||
+					  message.payload === false ||
+					  message.payload === 0
 					? false
-					: Boolean(message.payload)
+					: targetSimpleState
 			if (
 				targetSimpleState !== currentSimpleState &&
 				transitionTimer === null
 			) {
 				startTransition()
+			} else if (transitionTimer === null) {
+				sendCurrentStateCommand()
 			}
 			if (done) {
 				done()

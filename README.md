@@ -6,7 +6,7 @@ This is a Node-RED package to manage a traffic light.
 
 ### Life cycle
 
-![Life cycle](./docs/lifeCycle.png)
+![Life cycle](./docs/lifeCycle.svg)
 
 #### Stable states
 

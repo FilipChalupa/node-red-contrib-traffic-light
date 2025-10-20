@@ -15,8 +15,8 @@ This is a Node-RED package to manage a traffic light.
 
 #### Transition states
 
-- Only orange
-- Orange + red
+- Only yellow
+- Yellow + red
 
 ### Example usage ([JSON export](./examples/ledSemaphore.json))
 

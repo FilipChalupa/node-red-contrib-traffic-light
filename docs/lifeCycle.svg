@@ -4,31 +4,31 @@
   <g stroke-width=".61">
    <circle cx="25.135" cy="31.384" r="17.028" fill="#a00" fill-opacity=".2" style="paint-order:markers fill stroke"/>
    <circle cx="25.135" cy="106.96" r="17.028" fill="#55d400" style="paint-order:markers fill stroke"/>
-   <circle cx="25.135" cy="69.174" r="17.028" fill="#f60" fill-opacity=".2" style="paint-order:markers fill stroke"/>
+   <circle cx="25.135" cy="69.174" r="17.028" fill="#ffae00" fill-opacity=".2" style="paint-order:markers fill stroke"/>
   </g>
  </g>
  <rect x="213.88" width="66.001" height="181.64" ry="33.001" fill="#1a1a1a" stroke-width="1.184" style="paint-order:markers fill stroke"/>
  <g stroke-width=".9333">
   <circle cx="246.88" cy="33.001" r="26.053" fill="#a00" style="paint-order:markers fill stroke"/>
   <circle cx="246.88" cy="148.64" r="26.053" fill="#55d400" fill-opacity=".2" style="paint-order:markers fill stroke"/>
-  <circle cx="246.88" cy="90.819" r="26.053" fill="#f60" style="paint-order:markers fill stroke"/>
+  <circle cx="246.88" cy="90.819" r="26.053" fill="#ffae00" style="paint-order:markers fill stroke"/>
  </g>
  <rect x="285.17" width="66.001" height="181.64" ry="33.001" fill="#1a1a1a" stroke-width="1.184" style="paint-order:markers fill stroke"/>
  <g stroke-width=".9333">
   <circle cx="318.17" cy="33.001" r="26.053" fill="#a00" fill-opacity=".2" style="paint-order:markers fill stroke"/>
   <circle cx="318.17" cy="148.64" r="26.053" fill="#55d400" style="paint-order:markers fill stroke"/>
-  <circle cx="318.17" cy="90.819" r="26.053" fill="#f60" fill-opacity=".2" style="paint-order:markers fill stroke"/>
+  <circle cx="318.17" cy="90.819" r="26.053" fill="#ffae00" fill-opacity=".2" style="paint-order:markers fill stroke"/>
  </g>
  <rect x="142.59" width="66.001" height="181.64" ry="33.001" fill="#1a1a1a" stroke-width="1.184" style="paint-order:markers fill stroke"/>
  <g stroke-width=".9333">
   <circle cx="175.59" cy="33.001" r="26.053" fill="#a00" style="paint-order:markers fill stroke"/>
   <circle cx="175.59" cy="148.64" r="26.053" fill="#55d400" fill-opacity=".2" style="paint-order:markers fill stroke"/>
-  <circle cx="175.59" cy="90.819" r="26.053" fill="#f60" fill-opacity=".2" style="paint-order:markers fill stroke"/>
+  <circle cx="175.59" cy="90.819" r="26.053" fill="#ffae00" fill-opacity=".2" style="paint-order:markers fill stroke"/>
  </g>
  <rect x="71.293" width="66.001" height="181.64" ry="33.001" fill="#1a1a1a" stroke-width="1.184" style="paint-order:markers fill stroke"/>
  <g transform="matrix(1.53 0 0 1.53 65.836 -2.569e-7)" stroke-width=".61">
   <circle cx="25.135" cy="21.569" r="17.028" fill="#a00" fill-opacity=".2" style="paint-order:markers fill stroke"/>
   <circle cx="25.135" cy="97.149" r="17.028" fill="#55d400" fill-opacity=".2" style="paint-order:markers fill stroke"/>
-  <circle cx="25.135" cy="59.359" r="17.028" fill="#f60" style="paint-order:markers fill stroke"/>
+  <circle cx="25.135" cy="59.359" r="17.028" fill="#ffae00" style="paint-order:markers fill stroke"/>
  </g>
 </svg>

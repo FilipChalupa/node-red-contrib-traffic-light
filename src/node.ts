@@ -7,7 +7,7 @@ interface TrafficLightNodeConfiguration extends NodeRED.NodeDef {
 }
 
 type ColorState = 'on' | 'off'
-type State = 'green' | 'orange' | 'red' | 'red-orange'
+type State = 'green' | 'yellow' | 'red' | 'red+yellow'
 
 export = function (RED: NodeRED.NodeAPI) {
 	function TrafficLightNode(
@@ -31,17 +31,17 @@ export = function (RED: NodeRED.NodeAPI) {
 				payload: {
 					state,
 					red: getSingleLightStatePayload(
-						state === 'red' || state === 'red-orange' ? 'on' : 'off',
+						state === 'red' || state === 'red+yellow' ? 'on' : 'off',
 					),
-					orange: getSingleLightStatePayload(
-						state === 'orange' || state === 'red-orange' ? 'on' : 'off',
+					yellow: getSingleLightStatePayload(
+						state === 'yellow' || state === 'red+yellow' ? 'on' : 'off',
 					),
 					green: getSingleLightStatePayload(state === 'green' ? 'on' : 'off'),
 				},
 			})
 			this.status({
-				fill: state === 'red-orange' || state === 'orange' ? 'yellow' : state,
-				shape: 'ring',
+				fill: state === 'red+yellow' ? 'yellow' : state,
+				shape: 'dot',
 				text: state,
 			})
 		}
@@ -54,10 +54,10 @@ export = function (RED: NodeRED.NodeAPI) {
 		}
 
 		const startTransition = () => {
-			state = state === 'green' ? 'orange' : 'red-orange'
+			state = state === 'green' ? 'yellow' : 'red+yellow'
 			sendCurrentStateCommand()
 			transitionTimer = setTimeout(() => {
-				state = state === 'orange' ? 'red' : 'green'
+				state = state === 'yellow' ? 'red' : 'green'
 				sendCurrentStateCommand()
 				transitionTimer = setTimeout(() => {
 					currentSimpleState = state === 'green'

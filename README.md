@@ -1,4 +1,4 @@
-# node-red-contrib-traffic-light [![npm](https://img.shields.io/npm/v/node-red-contrib-traffic-light.svg)](https://www.npmjs.com/package/node-red-contrib-traffic-light) <img height="20px" src="https://nodered.org/about/resources/media/node-red-hexagon.png">
+# node-red-contrib-traffic-light [![npm](https://img.shields.io/npm/v/node-red-contrib-traffic-light.svg)](https://www.npmjs.com/package/node-red-contrib-traffic-light) [<img height="20px" src="https://nodered.org/about/resources/media/node-red-hexagon.png">](https://flows.nodered.org/node/node-red-contrib-traffic-light)
 
 ![Example semaphore hardware](./docs/exampleHardware.jpg)
 

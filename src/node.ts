@@ -39,6 +39,11 @@ export = function (RED: NodeRED.NodeAPI) {
 					green: getSingleLightStatePayload(state === 'green' ? 'on' : 'off'),
 				},
 			})
+			this.status({
+				fill: state === 'red-orange' || state === 'orange' ? 'yellow' : state,
+				shape: 'ring',
+				text: state,
+			})
 		}
 
 		const clearTransitionTimer = () => {
@@ -73,6 +78,7 @@ export = function (RED: NodeRED.NodeAPI) {
 
 		this.on('close', () => {
 			clearTransitionTimer()
+			this.status({})
 		})
 
 		this.on('input', (message: any, _send, done) => {
